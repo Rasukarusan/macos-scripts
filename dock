@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+main() {
+  osascript <<EOS
+  tell application "System Events"
+    tell dock preferences to set autohide to not autohide
+  end tell
+EOS
+}
+main

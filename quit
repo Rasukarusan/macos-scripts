@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+main() {
+  local app=$1
+  osascript <<-EOS
+    tell application "$1" to quit
+EOS
+}
+main
