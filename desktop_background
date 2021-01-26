@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+main() {
+  local picture_path=$1
+  osascript << EOS
+  tell application "System Events"
+      tell every desktop
+          set picture to "$picture_path"
+      end tell
+  end tell
+EOS
+}
+main "$@"
