@@ -14,9 +14,9 @@ main() {
     tell window "一般" of process "System Preferences"
       set _checkBox to checkbox "メニューバーを自動的に表示/非表示"
       set isChecked to value of _checkBox as boolean
-      if isChecked and $hide = 0 then
+      if isChecked and $hide = 1 then
         click _checkBox
-      else if not isChecked and $hide = 1 then
+      else if not isChecked and $hide = 0 then
         click _checkBox
       end if
     end tell
